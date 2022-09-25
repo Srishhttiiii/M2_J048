@@ -1,0 +1,32 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+    <main class="page service-page">
+        <section class="clean-block clean-services dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Title: {{fetchdata.name}}</h2>
+                    <h3 class="text-info">Day: {{fetchdata.Day}}</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card"><img class="card-img-top w-100 d-block" src="{% static 'img/scenery/image5.jpg' %}">
+                            <div class="card-body">
+                                <h4 class="card-title">Description: {{fetchdata.description}}</h4>
+                                <p class="card-text">Assignment: {{fetchdata.Assignment}}</p>
+                                <p class="card-text">Cycling: {{fetchdata.Cycling}}</p>
+                                <p class="card-text">Grooming: {{fetchdata.Grooming}}</p>
+                                <p class="card-text">Journaling: {{fetchdata.Journaling}}</p>
+                                <p class="card-text">Workout: {{fetchdata.Workout}}</p>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+
+    

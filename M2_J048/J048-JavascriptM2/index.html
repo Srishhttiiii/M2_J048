@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J048-M2</title>
+</head>
+<body>
+    <h1> My first JavaScript Code! </h1>
+    <h4> Hard-Coded Addition</h4>
+    <script>
+        document.write(7+8);
+    </script>
+    <h2> Addition Function (dynamic) </h2>
+    <script>
+    const num1 = parseInt(prompt('Enter the first number '));
+    const num2 = parseInt(prompt('Enter the second number '));
+
+    //add two numbers
+    const sum = num1 + num2;
+
+    // display the sum
+    document.write(`The sum of ${num1} and ${num2} is ${sum}`);
+    </script>
+
+    <!-- <script>
+
+    // using arrow functions
+
+    let a = (b, c) => b * c;
+    let b = parseInt(prompt('Enter first number'));
+    let c = parseInt(prompt('Enter second number'));
+
+    document.write(a);
+
+    </script> -->
+    
+    <h3> If-Else Statements </h3>
+    <script>
+ 
+    //if-else statement: The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t. 
+    //But what if we want to do something else if the condition is false. Here comes the else statement. 
+    //We can use the else statement with the if statement to execute a block of code when the condition is false.
+
+
+    //if (condition)
+    //{
+    // Executes this block if
+    // condition is true
+    //}
+    //else
+    //{
+    // Executes this block if
+    // condition is false
+    //}
+
+
+    var i = 30;
+     
+    if (i == 30) {
+     
+      // First if statement
+      if (i < 40)
+        document.write("i is smaller than 40\n");
+     
+      // Nested - if statement
+      // Will only be executed if statement above
+      // it is true
+      if (i < 35)
+        document.write("i is smaller than 35 too\n");
+      else
+        document.write("i is greater than 25");
+    }
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>

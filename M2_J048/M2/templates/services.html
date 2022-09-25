@@ -1,0 +1,44 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+    <main class="page service-page">
+        <section class="clean-block clean-services dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Your Daily Tasks</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        {% for i in special %}
+                        <div class="card"><img class="card-img-top w-100 d-block" src="{% static 'img/scenery/l.jpg' %}">
+                            <div class="card-body">
+                                <h4 class="card-title">Name: {{i.name}}</h4>
+                                <h4 class="card-title">Day: {{i.Day}}</h4>
+                                <p class="card-text">Description: {{i.description}}</p>
+                            </div>
+                            <div><button class="btn btn-outline-primary btn-sm" type="button" ><a href="{% url 'more' i.name %}">Learn More</button></a></div>
+                            <div>
+                                <a href="{% url 'update' i.id %}">
+                                    <button style="height: 50px; width: 120px; margin-left: 1% ;" data-inline="True">Update</button>
+                                </a>
+                                <a href="{% url 'delete' i.id %}">
+                                    <button style="height: 50px; width: 120px; margin-left: 10% ;" data-inline="True">Delete</button>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+
+                <div class="row" id="new">
+                    <a href="{% url 'add' %}"><button type="button" class="btn btn-outline-primary" style="width: 100%; background-color: lightblue;">Add</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+
+    

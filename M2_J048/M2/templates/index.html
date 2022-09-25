@@ -1,0 +1,59 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="page landing-page">
+    <section class="clean-block clean-hero" style="background-image:url(&quot;static/img/tech/businessman-planning-events-deadlines-agenda_74855-6274.jpg&quot;);color:rgba(131, 205, 251, 0.85);">
+        <div class="text">
+            <h2>How and why to keep track of daily activities and habits</h2>
+            <!-- <p></p><button class="btn btn-outline-light btn-lg" type="button"></button> -->
+        </div>
+    </section>
+    <section class="clean-block clean-info dark" style="margin-top: 10%;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6"><img class="img-thumbnail" src="{% static 'img/scenery/k.jpg' %}"></div>
+                <div class="col-md-6">
+                    <h3></h3>
+                    <div class="getting-started-info">
+                        <h2 class="text-info">Benefits of tracking activities</h2>
+                <p style="text-align: left;">If you often feel like you don’t have enough time for all your daily tasks, consider keeping track of what you do during work hours.</p>
+                        <p>Plan your day from anywhere. Access everything you need to do for the day in My Tasks.</p>
+                    </div><a href="{% url 'signup' %}">
+                        <button class="btn btn-outline-primary btn-lg" type="button" >Sign Up</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clean-block features">
+        <div class="container">
+            <div class="block-heading">
+                <h2 class="text-info">Features</h2>
+                <p></p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 feature-box"><i class="icon-star icon"></i>
+                    <h4>You’ll gain control of your time 5</h4>
+                    <p>By keeping your daily diary of activities, you’ll manage your time much better. Thus, you’ll do what you enjoy doing.</p>
+                </div>
+                <div class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
+                    <h4>You’ll be more realistic and organized</h4>
+                    <p>you’ll be able to make rational goals and plans for the future. </p>
+                </div>
+                <div class="col-md-5 feature-box"><i class="icon-screen-smartphone icon"></i>
+                    <h4>You’ll make better time estimates</h4>
+                    <p>when people make forecasts about their activities, they focus on the specific case from the past and its details.</p>
+                </div>
+                <div class="col-md-5 feature-box"><i class="icon-refresh icon"></i>
+                    <h4>You’ll be more accountable and productive</h4>
+                    <p>By tracking daily activities, we are able to identify what tasks are absorbing the majority of our time. With the data in hand, we can then make the necessary changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</main>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3"><label class="form-label" >Name</label><input class="form-control" type="text"  name="name"></div>
+                    <div class="mb-3"><label class="form-label" >Phone</label><input class="form-control" type="int"  name="phone"></div>
+                    <div class="mb-3"><label class="form-label" >Context</label><textarea class="form-control"  name="context"></textarea></div>
+                    <div class="mb-3"><button class="btn btn-primary" type="submit">Send</button></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

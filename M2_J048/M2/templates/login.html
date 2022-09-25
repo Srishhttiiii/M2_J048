@@ -1,0 +1,28 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+    <main class="page login-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Log In</h2>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label" >Username</label><input class="form-control" type="text" name="name" >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" >Password</label><input class="form-control" type="password" name="password" >
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label>
+                        </div>
+                    </div><button class="btn btn-primary" type="submit" style="margin-bottom: 30px;">Log In</button></br>
+                    <a href="{% url 'signup' %}">Don't have an account? Sign Up</a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

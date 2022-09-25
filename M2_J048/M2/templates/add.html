@@ -1,0 +1,69 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+    <main class="page login-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Daily Tasks</h2>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label"  >Name:</label>
+                        <input class="form-control item" type="text" name="name" >
+                    </div>
+                    <div class="mb-3"><label class="form-label"  >Description:</label><input class="form-control item" type="text" name="description"></div>
+                    <div class="mb-3"><label class="form-label"  >Day:</label>
+                        <select  name="Day" style="width: 100%;">
+                            <option value="Monday" style="text-align: center;">Monday</option>
+                            <option value="Tuesday" style="text-align: center;">Tuesday</option>
+                            <option value="Wednesday" style="text-align: center;">Wednesday</option>
+                            <option value="Thursday" style="text-align: center;">Thursday</option>
+                            <option value="Friday" style="text-align: center;">Friday</option>
+                            <option value="Saturday" style="text-align: center;">Saturday</option>
+                            <option value="Sunday" style="text-align: center;">Sunday</option>
+                          </select>
+                    
+                    </div>
+                    <div class="mb-3"><label class="form-label"  >Assignment:</label>
+                        <select  name="Assignment" style="width: 100%;">
+                            <option value="Yes" style="text-align: center;">Yes</option>
+                            <option value="No" style="text-align: center;">No</option>
+                          </select>
+                    
+                    </div>
+                    <div class="mb-3"><label class="form-label"  >Journaling:</label>
+                        <select  name="Journaling" style="width: 100%;">
+                            <option value="Yes" style="text-align: center;">Yes</option>
+                            <option value="No" style="text-align: center;">No</option>
+                          </select>                    
+                    </div>
+                    <div class="mb-3"><label class="form-label"  >Cycling:</label>
+                        <select  name="Cycling" style="width: 100%;">
+                            <option value="1-2 hours" style="text-align: center;">1-2 hours</option>
+                            <option value="Less than 2 hours" style="text-align: center;">Less than 2 hours</option>
+                            <option value="None" style="text-align: center;" >None</option>
+                          </select>
+                    </div>
+                    <div class="mb-3"><label class="form-label"  >Workout:</label>
+                        <select  name="Workout" style="width: 100%;">
+                            <option value="1-2 hours" style="text-align: center;">1-2 hours</option>
+                            <option value="Less than 2 hours" style="text-align: center;">Less than 2 hours</option>
+                            <option value="None" style="text-align: center;">None</option>
+                          </select>
+                    </div>
+                    <div class="mb-3"><label class="form-label"  >Grooming:</label>
+                        <select  name="Grooming" style="width: 100%;">
+                            <option value="Yes" style="text-align: center;">Yes</option>
+                            <option value="No" style="text-align: center;">No</option>
+                          </select>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Add</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
